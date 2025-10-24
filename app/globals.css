@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+/* ===== EASE – global tokens ===== */
+:root{
+  --ink:#0A0A0A;          /* text */
+  --bg:#FFFFFF;           /* pozadí */
+  --bg-soft:#F8F8F8;      /* karty, sekce */
+  --border:#E5E7EB;       /* linky */
+  --accent:#A9C3D1;       /* jemný akcent */
+  --r:12px;               /* radius */
+}
+
+html, body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family: Inter, system-ui, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.ease-card{
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+.ease-outline-btn{
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  background: transparent;
+  border-radius: 9999px;
+  padding: .625rem 1rem;
+  font-weight: 500;
+  transition: transform .15s ease, background-color .15s ease;
+}
+.ease-outline-btn:hover{ background: rgba(0,0,0,.04); transform: translateY(-1px);}
+.ease-outline-btn:active{ transform: translateY(0); }
+
+.ease-container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
